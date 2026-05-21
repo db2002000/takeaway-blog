@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於"
+  },
+  "home": {
+    "title": "打包Takeaway",
+    "subtitle": "視頻文字稿 · 個人成長 · 真實發現",
+    "readMore": "閱讀全文",
+    "noPosts": "暫無文章"
+  },
+  "post": {
+    "backToList": "返回列表",
+    "relatedConcepts": "相關概念",
+    "watchOn": "在以下平台觀看"
+  }
+}

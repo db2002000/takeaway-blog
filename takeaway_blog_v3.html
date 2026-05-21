@@ -1,0 +1,132 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body,div,span{font-family:'DM Sans',sans-serif}
+.wrap{background:#FAF8F5;color:#2A2535;min-height:700px;padding-bottom:48px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 40px;border-bottom:0.5px solid #EDE8F4}
+.nav-brand{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;letter-spacing:-0.02em;color:#2A2535}
+.nav-r{display:flex;align-items:center;gap:20px}
+.nav-links{display:flex;gap:22px;font-size:12px;color:#8A84A0;letter-spacing:0.05em}
+.lang{display:inline-flex;border:0.5px solid #DDD8E8;border-radius:5px;overflow:hidden;font-size:11px}
+.lang span{padding:4px 9px;color:#8A84A0;cursor:pointer}
+.lang span.on{background:#7B6FA0;color:#fff}
+.hero{padding:72px 40px 56px}
+.hero-eyebrow{font-size:11px;letter-spacing:0.14em;color:#B49AC0;text-transform:uppercase;margin-bottom:20px}
+.hero-title{font-family:'Playfair Display',serif;font-size:76px;font-weight:900;line-height:1.0;letter-spacing:-0.03em;color:#2A2535;max-width:680px;margin-bottom:28px}
+.hero-title em{font-style:italic;color:#7B6FA0}
+.hero-sub{font-size:15px;line-height:1.75;color:#6B6480;max-width:420px;margin-bottom:36px}
+.hero-meta{display:flex;align-items:center;gap:14px;font-size:12px;color:#8A84A0}
+.dot{width:3px;height:3px;border-radius:50%;background:#C9C2D8;display:inline-block}
+.divider{margin:0 40px;height:0.5px;background:#EDE8F4}
+.section{padding:40px 40px 0}
+.section-label{font-size:11px;letter-spacing:0.12em;color:#8A84A0;text-transform:uppercase;margin-bottom:24px}
+.post-list{display:flex;flex-direction:column;gap:0}
+.post-row{display:flex;align-items:baseline;justify-content:space-between;padding:20px 0;border-bottom:0.5px solid #EDE8F4;cursor:pointer;transition:opacity 0.15s}
+.post-row:hover .post-title{color:#7B6FA0}
+.post-left{display:flex;align-items:baseline;gap:20px;flex:1}
+.post-num{font-size:11px;color:#C9C2D8;min-width:20px;font-variant-numeric:tabular-nums}
+.post-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#2A2535;letter-spacing:-0.01em;transition:color 0.15s;line-height:1.25}
+.post-right{display:flex;align-items:center;gap:16px;flex-shrink:0;margin-left:24px}
+.post-tag{font-size:10px;letter-spacing:0.08em;color:#9B8AC0;background:#F2EEF8;padding:3px 8px;border-radius:4px;text-transform:uppercase}
+.post-date{font-size:11px;color:#C9C2D8;min-width:56px;text-align:right}
+.featured{background:#fff;border-radius:18px;border:0.5px solid #EDE8F4;padding:28px 32px;margin-bottom:0}
+.featured-label{font-size:10px;letter-spacing:0.12em;color:#B49AC0;text-transform:uppercase;margin-bottom:14px}
+.featured-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;line-height:1.2;color:#2A2535;letter-spacing:-0.02em;margin-bottom:12px}
+.featured-desc{font-size:13px;line-height:1.8;color:#6B6480;margin-bottom:20px}
+.featured-row{display:flex;align-items:center;justify-content:space-between}
+.yt-btn{display:flex;align-items:center;gap:7px;font-size:12px;color:#7B6FA0;background:#F2EEF8;border-radius:7px;padding:7px 13px;cursor:pointer;border:none}
+.yt-dot{width:18px;height:18px;background:#7B6FA0;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.yt-dot svg{width:6px;height:6px;fill:#fff;margin-left:1px}
+.about-strip{margin:40px 40px 0;background:#2A2535;border-radius:18px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between}
+.about-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#FAF8F5;line-height:1.3;max-width:360px}
+.about-sub{font-size:12px;color:#8A84A0;margin-top:6px;font-family:'DM Sans',sans-serif}
+.about-btn{font-size:12px;color:#2A2535;background:#FAF8F5;border-radius:8px;padding:10px 18px;cursor:pointer;white-space:nowrap;flex-shrink:0}
+</style>
+<div class="wrap">
+  <nav class="nav">
+    <div class="nav-brand">打包 Takeaway</div>
+    <div class="nav-r">
+      <div class="nav-links"><span>文章</span><span>关于</span></div>
+      <div class="lang"><span class="on">中</span><span>EN</span></div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-eyebrow">个人成长 · 真实发现</div>
+    <div class="hero-title">把值得的东西<br><em>打包带走</em></div>
+    <div class="hero-sub">视频的文字版。每篇文章对应一条影片，读完还想看的，直接跳转。</div>
+    <div class="hero-meta">
+      <span>月更</span><span class="dot"></span>
+      <span>中文为主</span><span class="dot"></span>
+      <span>全平台同步</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-label">最新文章</div>
+    <div class="featured">
+      <div class="featured-label">置顶 · 2025年4月</div>
+      <div class="featured-title">我是如何戒掉无效努力的</div>
+      <div class="featured-desc">我们花了太多时间在「看起来很努力」这件事上。这是我反思两年低效工作模式之后，真正有用的发现。</div>
+      <div class="featured-row">
+        <div class="yt-btn">
+          <div class="yt-dot"><svg viewBox="0 0 8 8"><polygon points="2,1 7,4 2,7"/></svg></div>
+          观看视频
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <div style="font-size:11px;color:#C9C2D8">同步发布于</div>
+          <div style="display:flex;gap:6px">
+            <div style="width:22px;height:22px;background:#F2EEF8;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#7B6FA0;cursor:pointer">YT</div>
+            <div style="width:22px;height:22px;background:#F2EEF8;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#7B6FA0;cursor:pointer">XH</div>
+            <div style="width:22px;height:22px;background:#F2EEF8;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#7B6FA0;cursor:pointer">抖</div>
+            <div style="width:22px;height:22px;background:#F2EEF8;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#7B6FA0;cursor:pointer">B</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-list" style="margin-top:8px">
+      <div class="post-row">
+        <div class="post-left">
+          <div class="post-num">02</div>
+          <div class="post-title">为什么你的早起计划总是失败</div>
+        </div>
+        <div class="post-right">
+          <div class="post-tag">习惯</div>
+          <div class="post-date">2025年3月</div>
+        </div>
+      </div>
+      <div class="post-row">
+        <div class="post-left">
+          <div class="post-num">03</div>
+          <div class="post-title">读了100本书之后，我改变了这个观念</div>
+        </div>
+        <div class="post-right">
+          <div class="post-tag">发现</div>
+          <div class="post-date">2025年2月</div>
+        </div>
+      </div>
+      <div class="post-row">
+        <div class="post-left">
+          <div class="post-num">04</div>
+          <div class="post-title">焦虑不是敌人</div>
+        </div>
+        <div class="post-right">
+          <div class="post-tag">心理</div>
+          <div class="post-date">2025年1月</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-strip">
+    <div>
+      <div class="about-text">记录真实的发现，<br>不贩卖焦虑。</div>
+      <div class="about-sub" style="color:#8A84A0;margin-top:8px">— DB</div>
+    </div>
+    <div class="about-btn">关于我 →</div>
+  </div>
+</div>

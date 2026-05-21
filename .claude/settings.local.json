@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(pnpm add *)",
+      "Bash(mkdir -p \"src/app/[locale]/posts/[slug]\" src/components/ui src/lib src/styles content/posts/how-i-beat-procrastination messages \"public/images/posts/how-i-beat-procrastination\")",
+      "Bash(mkdir -p src/app && mkdir -p \"src/app/[locale]/posts/[slug]\" && mkdir -p src/components/ui && mkdir -p src/lib && mkdir -p src/styles && mkdir -p \"content/posts/how-i-beat-procrastination\" && mkdir -p messages && mkdir -p \"public/images/posts/how-i-beat-procrastination\")",
+      "Bash(ls -la src/app/\\\\[locale\\\\]/posts && mkdir -p \"src/app/[locale]/about\")",
+      "Bash(pnpm build *)",
+      "Bash(pnpm lint *)",
+      "Bash(curl -s http://localhost:3000/zh/posts/how-i-beat-procrastination)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pnpm dev *)",
+      "Bash(curl -sL http://localhost:3000/zh)",
+      "Bash(curl -sL http://localhost:3000/zh/posts/how-i-beat-procrastination)",
+      "Bash(pnpm tsx *)",
+      "Bash(pnpm config *)",
+      "Bash(node --experimental-specifier-resolution=node --loader ts-node/esm scripts/fetch-youtube.ts)",
+      "Bash(npx -y tsx scripts/fetch-youtube.ts)",
+      "Bash(node scripts/fetch-youtube.mjs)"
+    ],
+    "additionalDirectories": [
+      "/Users/db/Desktop/Code/takeaway-blog/src/app/[locale]/posts/[slug]",
+      "/Users/db/Desktop/Code/takeaway-blog/src/app/[locale]"
+    ]
+  }
+}

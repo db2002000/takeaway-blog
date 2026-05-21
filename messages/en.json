@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "home": {
+    "title": "打包Takeaway",
+    "subtitle": "Video Transcripts · Personal Growth · Real Discoveries",
+    "readMore": "Read more",
+    "noPosts": "No posts yet"
+  },
+  "post": {
+    "backToList": "Back to list",
+    "relatedConcepts": "Related Concepts",
+    "watchOn": "Watch on"
+  }
+}
