@@ -20,9 +20,7 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <>
-      <div style={{color:'red',fontSize:12}}>{currentLocale}</div>
-      <div className="flex items-center gap-1 font-ui text-sm">
+    <div className="flex items-center gap-1 font-ui text-sm">
       {locales.map((l) => {
         const isActive = currentLocale === l.code;
         return (
@@ -41,6 +39,5 @@ export default function LocaleSwitcher() {
         );
       })}
     </div>
-    </>
   );
 }
