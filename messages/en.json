@@ -4,9 +4,17 @@
     "about": "About"
   },
   "home": {
-    "title": "打包Takeaway",
-    "subtitle": "Video Transcripts · Personal Growth · Real Discoveries",
-    "readMore": "Read more",
+    "tagline": "Personal Growth · Real Discoveries",
+    "heroTitle": "Take what matters",
+    "heroEm": "with you",
+    "heroSubtitle": "Video transcripts. Each article corresponds to one video. Read it here, watch it there.",
+    "updateFrequency": "Monthly",
+    "languageFocus": "Primarily Chinese",
+    "platformSync": "All platforms synced",
+    "latestPosts": "Latest Articles",
+    "featuredLabel": "Featured",
+    "readArticle": "Read article",
+    "morePosts": "More Articles",
     "noPosts": "No posts yet"
   },
   "post": {

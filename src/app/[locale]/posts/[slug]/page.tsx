@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Nav from '@/components/Nav';
 import PostCard from '@/components/PostCard';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function PostPage({ params }: PageProps) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations('post');
 
   const post = getPostBySlug(slug, locale as 'zh' | 'zh-Hant' | 'en');
@@ -138,7 +139,7 @@ export default async function PostPage({ params }: PageProps) {
         </header>
 
         <div className="max-w-3xl mx-auto">
-        <div className="prose prose-lg prose-primary max-w-none prose-headings:font-display prose-headings:font-bold prose-p:font-body prose-p:leading-relaxed prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
+        <div className="prose prose-lg prose-primary max-w-[65ch] mx-auto prose-headings:font-display prose-headings:font-bold prose-p:font-body prose-p:leading-relaxed prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
           <MDXRemote source={convertText(post.content)} components={{ Concept, BrainResetMap }} />
         </div>
       </div>

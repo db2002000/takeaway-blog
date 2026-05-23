@@ -16,8 +16,8 @@ export function getPostSlugs(): string[] {
 }
 
 export function getPostBySlug(slug: string, locale: 'zh' | 'en' | 'zh-Hant'): Post | null {
-  // zh-Hant 读取 zh.mdx，简繁转换在渲染层处理
-  const fileLocale = locale === 'zh-Hant' ? 'zh' : locale;
+  // zh-Hant reads from zh-Hant.mdx
+  const fileLocale = locale === 'zh-Hant' ? 'zh-Hant' : locale;
   const filePath = path.join(postsDirectory, slug, `${fileLocale}.mdx`);
 
   if (!fs.existsSync(filePath)) {
@@ -54,12 +54,9 @@ export function getAllPosts(locale: 'zh' | 'en' | 'zh-Hant'): Post[] {
 }
 
 export function hasAlternateLocale(slug: string, currentLocale: 'zh' | 'en' | 'zh-Hant'): boolean {
-  if (currentLocale === 'zh-Hant') {
-    return fs.existsSync(path.join(postsDirectory, slug, 'en.mdx'));
-  }
   if (currentLocale === 'en') {
-    return fs.existsSync(path.join(postsDirectory, slug, 'zh-Hant.mdx')) ||
-           fs.existsSync(path.join(postsDirectory, slug, 'zh.mdx'));
+    return fs.existsSync(path.join(postsDirectory, slug, 'zh.mdx')) ||
+           fs.existsSync(path.join(postsDirectory, slug, 'zh-Hant.mdx'));
   }
   return fs.existsSync(path.join(postsDirectory, slug, 'en.mdx'));
 }

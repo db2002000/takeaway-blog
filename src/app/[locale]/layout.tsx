@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import '../../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const messages = await getMessages();
+  setRequestLocale(locale);
 
   return (
     <html lang={locale} className="h-full">
@@ -40,7 +40,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="min-h-screen bg-bg font-body antialiased">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale}>
           <div className="max-w-4xl mx-auto px-6 py-8">
             {children}
           </div>

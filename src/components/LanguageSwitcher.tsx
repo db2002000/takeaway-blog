@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 interface LanguageSwitcherProps {
   hasAlternate: boolean;
@@ -10,14 +12,15 @@ export default function LanguageSwitcher({
   hasAlternate,
   alternateSlug,
 }: LanguageSwitcherProps) {
-  const locale = useLocale();
+  const pathname = usePathname();
 
   if (!hasAlternate || !alternateSlug) {
     return null;
   }
 
-  const alternateLocale = locale === 'zh' ? 'en' : 'zh';
-  const label = locale === 'zh' ? 'English' : '中文';
+  const currentLocale = pathname.split('/')[1];
+  const alternateLocale = currentLocale === 'en' ? 'zh' : 'en';
+  const label = currentLocale === 'en' ? '中文' : 'English';
 
   return (
     <div className="flex items-center gap-2 font-ui text-sm">

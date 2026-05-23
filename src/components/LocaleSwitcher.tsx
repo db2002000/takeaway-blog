@@ -1,33 +1,46 @@
 'use client';
 
-import { useLocale } from 'next-intl';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const locales = [
-  { code: 'zh', label: '简中' },
-  { code: 'zh-Hant', label: '繁中' },
-  { code: 'en', label: 'English' },
+  { code: 'zh', label: '简' },
+  { code: 'zh-Hant', label: '繁' },
+  { code: 'en', label: 'EN' },
 ];
 
 export default function LocaleSwitcher() {
-  const locale = useLocale();
+  const pathname = usePathname();
+  const currentLocale = pathname.split('/')[1];
+
+  const handleSwitch = (targetLocale: string) => {
+    const segments = pathname.split('/');
+    segments[1] = targetLocale;
+    return segments.join('/');
+  };
 
   return (
-    <div className="flex items-center gap-1 font-ui text-sm">
-      {locales.map((l) => (
-        <Link
-          key={l.code}
-          href={`/${l.code}`}
-          scroll={false}
-          className={`px-2 py-1 rounded transition-colors ${
-            locale === l.code
-              ? 'bg-accent text-white'
-              : 'text-text-muted hover:text-text-primary'
-          }`}
-        >
-          {l.label}
-        </Link>
-      ))}
+    <>
+      <div style={{color:'red',fontSize:12}}>{currentLocale}</div>
+      <div className="flex items-center gap-1 font-ui text-sm">
+      {locales.map((l) => {
+        const isActive = currentLocale === l.code;
+        return (
+          <Link
+            key={l.code}
+            href={handleSwitch(l.code)}
+            scroll={false}
+            className={`px-2 py-1 rounded transition-colors ${
+              isActive
+                ? 'bg-accent text-white'
+                : 'text-text-muted hover:text-text-primary'
+            }`}
+          >
+            {l.label}
+          </Link>
+        );
+      })}
     </div>
+    </>
   );
 }

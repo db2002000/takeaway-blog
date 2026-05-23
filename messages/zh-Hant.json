@@ -4,9 +4,17 @@
     "about": "關於"
   },
   "home": {
-    "title": "打包Takeaway",
-    "subtitle": "視頻文字稿 · 個人成長 · 真實發現",
-    "readMore": "閱讀全文",
+    "tagline": "個人成長 · 真實發現",
+    "heroTitle": "把值得的東西",
+    "heroEm": "打包帶走",
+    "heroSubtitle": "視頻的文字版。每篇文章對應一條影片，讀完還想看的，直接跳轉。",
+    "updateFrequency": "月更",
+    "languageFocus": "中文為主",
+    "platformSync": "全平台同步",
+    "latestPosts": "最新文章",
+    "featuredLabel": "置頂",
+    "readArticle": "閱讀文章",
+    "morePosts": "更多文章",
     "noPosts": "暫無文章"
   },
   "post": {
