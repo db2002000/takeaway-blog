@@ -235,6 +235,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@netlify/plugin-nextjs':
+        specifier: ^5.15.11
+        version: 5.15.11
       '@types/node':
         specifier: ^25.8.0
         version: 25.8.0
@@ -469,6 +472,10 @@ packages:
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
+
+  '@netlify/plugin-nextjs@5.15.11':
+    resolution: {integrity: sha512-cx7yoJFYDBFRecGqJaEUuvnHvU+vs9ISn7DUXyijPheaqtbyRy4+z7Mjre9swEJ19ItVeFhuGuXUkl6X5nfJeA==}
+    engines: {node: '>=18.0.0'}
 
   '@next/env@14.2.35':
     resolution: {integrity: sha512-DuhvCtj4t9Gwrx80dmz2F4t/zKQ4ktN8WrMwOuVzkJfBilwAwGr6v16M5eI8yCuZ63H9TTuEU09Iu2HqkzFPVQ==}
@@ -1709,6 +1716,8 @@ snapshots:
       '@types/mdx': 2.0.13
       '@types/react': 19.2.14
       react: 18.3.1
+
+  '@netlify/plugin-nextjs@5.15.11': {}
 
   '@next/env@14.2.35': {}
 
