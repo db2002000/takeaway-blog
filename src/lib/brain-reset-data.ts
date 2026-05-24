@@ -1,5 +1,3 @@
-import { useLocale } from 'next-intl';
-
 type Option = { label: string; sub?: string; next: string };
 
 type QuestionNode = {

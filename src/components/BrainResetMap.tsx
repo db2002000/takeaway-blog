@@ -69,7 +69,7 @@ export default function BrainResetMap() {
 
   const totalSteps = 4;
   const StepDots = () => (
-    <div className='flex gap-1.5 justify-center mb-5'>
+    <div className="flex gap-1.5 justify-center mb-5">
       {Array.from({ length: totalSteps }).map((_, i) => (
         <div
           key={i}
@@ -87,11 +87,11 @@ export default function BrainResetMap() {
 
   const NavBar = () =>
     history.length > 0 ? (
-      <div className='flex gap-4 justify-center mb-4 text-xs text-zinc-400'>
-        <button onClick={goBack} className='hover:text-zinc-600 underline underline-offset-2 transition-colors'>
-          ← {locale === 'en' ? 'Back' : '返回上一步'}
+      <div className="flex gap-4 justify-center mb-4 text-xs text-zinc-400">
+        <button onClick={goBack} className="hover:text-zinc-600 underline underline-offset-2 transition-colors">
+          {locale === 'en' ? 'Back' : '返回上一步'}
         </button>
-        <button onClick={reset} className='hover:text-zinc-600 underline underline-offset-2 transition-colors'>
+        <button onClick={reset} className="hover:text-zinc-600 underline underline-offset-2 transition-colors">
           {locale === 'en' ? 'Start over' : '重新开始'}
         </button>
       </div>
@@ -99,28 +99,28 @@ export default function BrainResetMap() {
 
   if (node.type === 'question') {
     return (
-      <div className='max-w-lg mx-auto px-4 py-6 font-sans' style={{ maxHeight: '85vh', overflow-y: 'auto' }}>
+      <div className="max-w-lg mx-auto px-4 py-6 font-sans" style={{ maxHeight: '85vh', overflowY: 'auto' }}>
         <StepDots />
         <NavBar />
-        <div className='bg-zinc-50 border border-zinc-200 rounded-2xl px-5 py-4 mb-3 text-center min-h-[120px] flex flex-col justify-center'>
-          <p className='text-[15px] font-medium text-zinc-800 leading-relaxed'>{node.q}</p>
+        <div className="bg-zinc-50 border border-zinc-200 rounded-2xl px-5 py-4 mb-3 text-center min-h-[120px] flex flex-col justify-center">
+          <p className="text-[15px] font-medium text-zinc-800 leading-relaxed">{node.q}</p>
           {node.sub && (
-            <p className='text-xs text-zinc-400 mt-1'>{node.sub}</p>
+            <p className="text-xs text-zinc-400 mt-1">{node.sub}</p>
           )}
         </div>
-        <div className='text-center text-zinc-300 text-lg mb-3'>↓</div>
-        <div className='flex flex-col gap-2'>
+        <div className="text-center text-zinc-300 text-lg mb-3">↓</div>
+        <div className="flex flex-col gap-2">
           {node.options.map((opt) => (
             <button
               key={opt.next}
               onClick={() => choose(opt.next)}
-              className='w-full text-left border border-zinc-200 rounded-xl px-4 py-3 bg-white hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-150 group'
+              className="w-full text-left border border-zinc-200 rounded-xl px-4 py-3 bg-white hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-150 group"
             >
-              <div className='text-sm font-medium text-zinc-800 group-hover:text-zinc-900'>
+              <div className="text-sm font-medium text-zinc-800 group-hover:text-zinc-900">
                 {opt.label}
               </div>
               {opt.sub && (
-                <div className='text-xs text-zinc-400 mt-0.5'>{opt.sub}</div>
+                <div className="text-xs text-zinc-400 mt-0.5">{opt.sub}</div>
               )}
             </button>
           ))}
@@ -132,20 +132,20 @@ export default function BrainResetMap() {
   const colors = COLOR_MAP[node.stateColor];
 
   return (
-    <div className='max-w-lg mx-auto px-4 py-6 font-sans' style={{ maxHeight: '85vh', overflow-y: 'auto' }}>
+    <div className="max-w-lg mx-auto px-4 py-6 font-sans" style={{ maxHeight: '85vh', overflowY: 'auto' }}>
       <StepDots />
       <NavBar />
       <div className={`rounded-2xl border ${colors.border} ${colors.bg} px-5 py-5 min-h-[120px]`}>
         <div className={`text-xs font-semibold tracking-wide uppercase mb-2 ${colors.text}`}>
           {node.state}
         </div>
-        <h2 className='text-[15px] font-semibold text-zinc-900 leading-snug mb-2'>
+        <h2 className="text-[15px] font-semibold text-zinc-900 leading-snug mb-2">
           {node.title}
         </h2>
-        <p className='text-xs text-zinc-600 leading-relaxed mb-4'>{node.desc}</p>
+        <p className="text-xs text-zinc-600 leading-relaxed mb-4">{node.desc}</p>
 
-        <p className='text-[11px] text-zinc-400 mb-2'>{locale === 'en' ? 'Click method to see mechanism' : '点击方法查看原理（★ 推荐优先尝试）'}</p>
-        <div className='flex flex-wrap gap-1.5 mb-3'>
+        <p className="text-[11px] text-zinc-400 mb-2">{locale === 'en' ? 'Click method to see mechanism' : '点击方法查看原理（★ 推荐优先尝试）'}</p>
+        <div className="flex flex-wrap gap-1.5 mb-3">
           {node.methods.map((m) => {
             const isHighlight = node.highlight.includes(m.name);
             const isActive = activeMec === m.name;
@@ -168,23 +168,23 @@ export default function BrainResetMap() {
         </div>
 
         {activeMec && (
-          <div className='bg-white/70 rounded-xl border border-zinc-200 px-4 py-3 mb-3 text-xs text-zinc-600 leading-relaxed'>
-            <span className='font-medium text-zinc-800'>{activeMec}: </span>
+          <div className="bg-white/70 rounded-xl border border-zinc-200 px-4 py-3 mb-3 text-xs text-zinc-600 leading-relaxed">
+            <span className="font-medium text-zinc-800">{activeMec}: </span>
             {node.methods.find((m) => m.name === activeMec)?.mec}
           </div>
         )}
 
         {node.tip && (
-          <div className='text-[11px] text-zinc-500 leading-relaxed border-t border-zinc-200/60 pt-3 mt-1'>
+          <div className="text-[11px] text-zinc-500 leading-relaxed border-t border-zinc-200/60 pt-3 mt-1">
             💡 {node.tip}
           </div>
         )}
       </div>
 
-      <div className='text-center mt-4'>
+      <div className="text-center mt-4">
         <button
           onClick={reset}
-          className='text-xs text-zinc-400 hover:text-zinc-600 border border-zinc-200 rounded-lg px-4 py-2 transition-colors hover:bg-zinc-50'
+          className="text-xs text-zinc-400 hover:text-zinc-600 border border-zinc-200 rounded-lg px-4 py-2 transition-colors hover:bg-zinc-50"
         >
           {locale === 'en' ? 'Go through again' : '重新走一遍'}
         </button>

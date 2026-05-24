@@ -9,6 +9,7 @@ import YouTubeEmbed from '@/components/YouTubeEmbed';
 import PlatformLinks from '@/components/PlatformLinks';
 import Concept from '@/components/Concept';
 import BrainResetMap from '@/components/BrainResetMap';
+import TrackingSelector from '@/components/TrackingSelector';
 import VideoPlayer from '@/components/VideoPlayer';
 import { getPostBySlug, hasAlternateLocale, getAllPosts } from '@/lib/mdx';
 import { toTraditionalChinese } from '@/lib/zh-hant';
@@ -140,7 +141,7 @@ export default async function PostPage({ params }: PageProps) {
 
         <div className="max-w-3xl mx-auto">
         <div className="prose prose-lg prose-primary max-w-[65ch] mx-auto prose-headings:font-display prose-headings:font-bold prose-p:font-body prose-p:leading-relaxed prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
-          <MDXRemote source={convertText(post.content)} components={{ Concept, BrainResetMap }} />
+          <MDXRemote source={convertText(post.content)} components={{ Concept, BrainResetMap, TrackingSelector }} />
         </div>
       </div>
 
