@@ -99,7 +99,7 @@ export default function BrainResetMap() {
 
   if (node.type === 'question') {
     return (
-      <div className='max-w-lg mx-auto px-4 py-6 font-sans' style={{ maxHeight: '480px', overflow: 'hidden' }}>
+      <div className='max-w-lg mx-auto px-4 py-6 font-sans' style={{ maxHeight: '85vh', overflow-y: 'auto' }}>
         <StepDots />
         <NavBar />
         <div className='bg-zinc-50 border border-zinc-200 rounded-2xl px-5 py-4 mb-3 text-center min-h-[120px] flex flex-col justify-center'>
@@ -132,7 +132,7 @@ export default function BrainResetMap() {
   const colors = COLOR_MAP[node.stateColor];
 
   return (
-    <div className='max-w-lg mx-auto px-4 py-6 font-sans' style={{ maxHeight: '480px', overflow: 'hidden' }}>
+    <div className='max-w-lg mx-auto px-4 py-6 font-sans' style={{ maxHeight: '85vh', overflow-y: 'auto' }}>
       <StepDots />
       <NavBar />
       <div className={`rounded-2xl border ${colors.border} ${colors.bg} px-5 py-5 min-h-[120px]`}>

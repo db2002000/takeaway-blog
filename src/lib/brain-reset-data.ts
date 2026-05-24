@@ -121,8 +121,8 @@ const ZH_STATES: States = {
   },
   chronic_deep: {
     type: 'question',
-    q: 'Is there an ongoing source draining you?',
-    sub: 'Like relationships, environment, work, inner critic',
+    q: '有什么在持续消耗你吗？',
+    sub: '比如关系、环境、工作、内在批评者',
     options: [
       { label: '有，我知道是什么', next: 'chronic_source_known' },
       { label: '说不清楚，就是这样', next: 'chronic_source_unknown' },
@@ -161,10 +161,10 @@ const ZH_STATES: States = {
   },
   emotion_acute: {
     type: 'question',
-    q: 'How intense is this emotion?',
+    q: '这个情绪有多强烈？',
     options: [
-      { label: 'Very strong, almost out of control', next: 'emotion_strong' },
-      { label: 'Moderate, but lingering', next: 'emotion_medium' },
+      { label: '很强烈，几乎失控', next: 'emotion_strong' },
+      { label: '中等，但挥之不去', next: 'emotion_medium' },
     ],
   },
   emotion_strong: {
@@ -335,10 +335,10 @@ const EN_STATES: States = {
   },
   emotion_acute: {
     type: 'question',
-    q: 'How intense is this emotion?',
+    q: '这个情绪有多强烈？',
     options: [
-      { label: 'Very strong, almost out of control', next: 'emotion_strong' },
-      { label: 'Moderate, but lingering', next: 'emotion_medium' },
+      { label: '很强烈，几乎失控', next: 'emotion_strong' },
+      { label: '中等，但挥之不去', next: 'emotion_medium' },
     ],
   },
   emotion_strong: {
