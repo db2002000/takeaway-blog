@@ -185,6 +185,7 @@ export default function TalentDiscovery() {
                 '对一再犯同样错误的人不满 → 从根本解决问题的天赋',
                 '对不考虑他人立场的人不满 → 换位思考的天赋',
               ],
+              placeholder: '写下让你感到不满的行为，再想想：你认为理所当然的，是什么？',
             },
             {
               num: 2,
@@ -195,6 +196,7 @@ export default function TalentDiscovery() {
                 '被提醒不和人商量就做决定 → 独立决策的天赋',
                 '被提醒说话太直接 → 清晰表达的天赋',
               ],
+              placeholder: '写下被提醒过的事。想想：如果放到适合的环境，这会是什么优点？',
             },
             {
               num: 3,
@@ -205,6 +207,7 @@ export default function TalentDiscovery() {
                 '被禁止给人提建议 → 发现改进点的天赋',
                 '被禁止看书学习 → 持续学习的天赋',
               ],
+              placeholder: '写下如果不能做会感到憋屈的事，或让你感到压抑的工作环境。',
             },
             {
               num: 4,
@@ -215,6 +218,7 @@ export default function TalentDiscovery() {
                 '有时用词激烈 → 正因如此，能用语言激励他人',
                 '很难按指示行事 → 正因如此，能主动采取行动',
               ],
+              placeholder: '先写一个你认为的缺点，再用「正因如此」翻转它。',
             },
             {
               num: 5,
@@ -225,6 +229,7 @@ export default function TalentDiscovery() {
                 '检查文件里的错误很有趣 → 发现问题的天赋',
                 '主持会议让大家发言很有趣 → 引导讨论的天赋',
               ],
+              placeholder: '写下这件事，再挖掘：你最享受的那个部分是什么行为？',
             },
           ].map((item, i) => (
             <Card key={i}>
@@ -239,7 +244,7 @@ export default function TalentDiscovery() {
               <textarea
                 value={answers[i]}
                 onChange={(e) => updateAnswer(i, e.target.value)}
-                placeholder="写下让你感到不满的行为，再想想：你认为理所当然的，是什么？"
+                placeholder={item.placeholder}
                 className="w-full min-h-[88px] rounded-lg border p-3 text-sm resize-y"
                 style={{
                   background: 'var(--color-bg)',
