@@ -30,6 +30,12 @@ export default function Nav() {
           >
             {t('about')}
           </Link>
+          <Link
+            href={`/${locale}/tools`}
+            className="text-text-secondary hover:text-text-primary transition-colors"
+          >
+            工具
+          </Link>
         </div>
         <LocaleSwitcher />
       </div>
