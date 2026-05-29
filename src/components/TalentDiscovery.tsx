@@ -323,16 +323,19 @@ export default function TalentDiscovery() {
               num: 1,
               q: '你没有特别努力却被夸奖的事是什么？',
               hint: '努力后才被夸 → 不一定是天赋。没怎么努力就被夸 → 这才是天赋的信号。可以直接问亲近的人：「你觉得我有什么厉害的地方？」',
+              placeholder: '写下别人夸过你、但你觉得只是「正常操作」的事。',
             },
             {
               num: 2,
               q: '我与众不同的地方是什么？',
               hint: '「不同之处」无论是优点还是缺点，背后通常都暗藏着天赋。可以问朋友或同事：「你觉得我和大家有什么不一样的地方？」',
+              placeholder: '写下别人提到过你「与众不同」的地方。',
             },
             {
               num: 3,
               q: '别人感谢你帮助过他们的事是什么？',
               hint: '越是觉得「这没什么，举手之劳」的帮助，越可能是天赋——因为你根本没意识到自己做了什么特别的事。',
+              placeholder: '写下别人感谢过你的事，以及你当时是怎么做到的。',
             },
           ].map((item, i) => (
             <Card key={i}>
@@ -346,7 +349,7 @@ export default function TalentDiscovery() {
               <textarea
                 value={peerAnswers[i]}
                 onChange={(e) => updatePeerAnswer(i, e.target.value)}
-                placeholder="写下别人夸过你、但你觉得只是「正常操作」的事。"
+                placeholder={item.placeholder}
                 className="w-full min-h-[88px] rounded-lg border p-3 text-sm resize-y"
                 style={{
                   background: 'var(--color-bg)',
