@@ -2,7 +2,11 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 
 import path from 'path';
 import matter from 'gray-matter';
 
-const API_KEY = '54b28140-514a-47c3-a828-0df7f40d8509:fx';
+const API_KEY = process.env.DEEPL_API_KEY;
+if (!API_KEY) {
+  console.error('Missing DEEPL_API_KEY env var');
+  process.exit(1);
+}
 const POSTS_DIR = path.join(process.cwd(), 'content/posts');
 
 const slugs = readdirSync(POSTS_DIR).filter(f => {
